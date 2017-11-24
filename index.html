@@ -5,18 +5,21 @@
 	<title>Laracast Vue 2 Tutorial</title>
 </head>
 <body>
-
-	<input id="input" type="text"></input>
+	<script src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
+	<div id="root">
+		<input id="input" type="text" v-model="message"></input>
+	</div>
 
 	<script>
-		let data = {
-			message: 'Hello World'
-		};
-
-		document.querySelector('#input').value = data.message;
+		new Vue({
+			el: root,
+			data: {
+				message : 'Hello World'
+			}
+		})
 	</script>
 
 
-	<script src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
+	
 </body>
 </html>
