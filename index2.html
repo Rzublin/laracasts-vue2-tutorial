@@ -9,16 +9,22 @@
 	<script src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
 
 	<div id="root">
-		<button v-bind:title="title">Hover over me</button>
+		<h2 :title="title">Hover over me</h2>
+		<button :disabled="isDisabled" @click="disableButton">Click Me</button>
 	</div>
 
 	<script>
 		new Vue({
 			el: '#root',
 			data:{
-				title : 'This is being set through Javascript.'
+				isDisabled : false,
+				title : 'Click the button to disable it.'
 			},
-			methods: ''
+			methods: {
+				disableButton : function(){
+					this.isDisabled = true;
+				}
+			}
 		})
 
 	</script>
