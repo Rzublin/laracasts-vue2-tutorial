@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laracasts Vue 2 Tutorial</title>
+
+</head>
+<body>
+	<script src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
+
+	<div id="root">
+		<button v-bind:title="title">Hover over me</button>
+	</div>
+
+	<script>
+		new Vue({
+			el: '#root',
+			data:{
+				title : 'This is being set through Javascript.'
+			},
+			methods: ''
+		})
+
+	</script>
+	
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Laracast Vue 2 Tutorial</title>
+	<title>Laracasts Vue 2 Tutorial</title>
 </head>
 <body>
 	<script src="https://unpkg.com/vue@2.5.8/dist/vue.js"></script>
@@ -12,7 +12,7 @@
 			<li v-for="name in names" v-text="name"></li>
 		</ul>
 		<input type="text" v-model='newname'>
-		<button v-on:click="addName">Add Name</button>
+		<button @click="addName">Add Name</button>
 
 	</div>
 
@@ -31,7 +31,6 @@
 			}
 		})
 	</script>
-		
 	
 </body>
 </html>
