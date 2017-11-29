@@ -16,12 +16,12 @@
 
 		<h2>Completed Tasks</h2>
 		<ul>
-			<li v-for="task in tasks" v-text="task.description" v-if="task.completed"></li>
+			<li v-for="task in completedTasks" v-text="task.description"></li>
 		</ul>
 
 		<h2>Incompleted Tasks</h2>
 		<ul>
-			<li v-for="task in tasks" v-text="task.description" v-if="!task.completed"></li>
+			<li v-for="task in incompletedTasks" v-text="task.description"></li>
 		</ul>
 
 	</div>
@@ -39,8 +39,13 @@
 					{description: 'Clean room', completed: true}
 				]
 			},
-			methods: {
-
+			computed: {
+				incompletedTasks() {
+					return this.tasks.filter(task => ! task.completed);	
+				},
+				completedTasks(){
+					return this.tasks.filter(task => task.completed);
+				}
 			}
 		})
 	</script>
